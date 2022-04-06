@@ -2,97 +2,117 @@
   margin: 0;
   padding: 0;
 }
-.mainContainer {
-  display: grid;
-  grid-template-rows: auto auto auto auto auto;
-  box-sizing: border-box;
-}
-/* STYLING NAVIGATION */
-.navigation {
-  /* background-color: #4dabf7; */
-  height: 12vh;
-  display: grid;
-  grid-template-columns: 1fr auto auto auto auto;
-  align-content: center;
-  justify-content: end;
-  grid-gap: 2em;
-  /* border-bottom: 3px solid #4dabf7; */
-}
-.nicon {
-  width: 0px;
-  height: 60px;
-  fill: #4dabf7;
-}
-.name {
-  color: black;
-  font-weight: 600;
-  font-size: 20px;
-  font-family: Arial, Helvetica, "Segoe UI", Tahoma, Geneva, Verdana,
-    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode",
-    Geneva, Verdana, serif;
-  justify-content: center;
-  padding: 10px 10px;
-}
-
-nav a {
-  color: white;
-  color: #495057;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 18px;
-  padding: 10px 10px;
-  border: 2px solid #a5d8ff;
-  border-radius: 50px;
-}
-nav a:hover {
-  border: 2px solid #a5d8ff;
-  border-radius: 50px;
-}
-.shrink {
-  width: 100%;
-  height: 15vh;
-}
-.mainheader {
-  display: grid;
-  /* background-color: aquamarine; */
-  height: 65vh;
-  grid-template-columns: 50vw 45vw;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 50vh;
-  justify-items: center;
-  gap: 5em;
-}
-.maintext {
-  align-self: start;
-}
-.mainh1 {
-  color: #495057;
-  line-height: 1.5;
-  font-style: oblique;
-  font-weight: 900;
-  font-family: sans-serif;
-}
-.ntext {
-  color: #4dabf7;
-}
-img {
-  width: 80%;
-  height: 100%;
-}
-
-/* .section1 {
-    width: 40vw;
-    height: 20vh;
+.section1 {
+  width: 40vw;
+  height: 20vh;
 }
 .section2 {
-    width: 40vw;
-    height: 20vh;
+  width: 40vw;
+  height: 20vh;
 }
 .article2 {
-    width: 40vw;
+  width: 40vw;
   height: 20vh;
 }
 .footer {
   width: 40vw;
   height: 20vh;
-} */
+}
+.mainContainer {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+  box-sizing: border-box;
+  gap: 3vh;
+}
+/* STYLING NAVIGATION */
+.navigation {
+  background-color: #e9ecef;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.icontext {
+  display: flex;
+}
+.navicon {
+  width: 100px;
+  height: 100px;
+  fill: #00b4d8;
+  fill: #1864ab;
+}
+.shrinknav {
+  width: 18%;
+}
+nav a {
+  text-decoration: none;
+  justify-self: flex-end;
+}
+
+.name {
+  font-weight: 900;
+  font-size: 34px;
+  text-indent: 1%;
+  font-family: sans-serif;
+  color: #00b4d8;
+  color: #d9480f;
+  /* #0b7285; */
+}
+.shrink {
+  /* background-color: aquamarine; */
+  height: 2vh;
+}
+.mainheader {
+  /* background-color: beige; */
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.maintext {
+  /* background-color: blue; */
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+.mainimage {
+  width: 50%;
+}
+.mainh1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-style: italic;
+  font-size: 38px;
+  color: #495057;
+}
+#notifications {
+  color: #00b4d8;
+  font-size: 44px;
+}
+.phone {
+  width: 100%;
+  height: 100%;
+  fill: #00b4d8;
+}
+.mainimage {
+  display: flex;
+  justify-content: flex-end;
+}
+.downloadButton {
+  width: 44%;
+  align-self: baseline;
+  height: 50px;
+  background-color: #087f5b;
+  border-radius: 5px;
+  box-shadow: 0 7px 5px 0 rgba(0, 0, 0, 0.295);
+  border: 2px solid #087f5b;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  cursor: pointer;
+}
+.version {
+  font-size: 22px;
+  color: #868e96;
+}
