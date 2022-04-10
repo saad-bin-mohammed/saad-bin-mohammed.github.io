@@ -19,9 +19,12 @@ html {
   padding: 2.5rem 2.5rem;
   margin: 0 auto;
 }
+.svgandtext {
+  display: flex;
+}
 .icon {
-  width: 4rem;
-  height: 4rem;
+  width: 2.3rem;
+  height: 2.9rem;
   fill: #5f3dc4;
   fill: #b197fc;
 }
@@ -55,10 +58,12 @@ html {
 #download {
   transition: all 0.3s;
   color: white;
+  box-shadow: 0 0.1rem 1rem 0 rgba(0, 0, 0, 0.438);
 }
 #download:hover {
   background-color: #d0bfff;
   color: black;
+  color: #868e96;
 }
 
 .container {
@@ -71,6 +76,9 @@ html {
 .hero-text {
   align-self: center;
   line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
 }
 .hero-image {
   justify-self: end;
@@ -90,9 +98,79 @@ html {
   font-size: 5.2rem;
   font-weight: 1000;
 }
+.description {
+  color: #adb5bd;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
 .small {
   color: #b197fc;
   font-size: 2.2rem;
   font-weight: 900;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.button-container {
+  display: flex;
+  gap: 3rem;
+}
+.main-btn {
+  max-width: 30%;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  background-color: #b197fc;
+  font-size: 1.4rem;
+  font-weight: 900;
+  justify-self: flex-start;
+  border-radius: 1rem;
+  box-shadow: 0 0.1rem 1.1rem 0 rgba(0, 0, 0, 0.438);
+  color: #495057;
+  transition: all 0.8s;
+  text-align: center;
+  display: flex;
+  gap: 0.2rem;
+}
+.main-btn:hover {
+  color: white;
+  stroke: white;
+}
+.right-arrow {
+  font-weight: 900;
+  height: 2rem;
+  width: 4rem;
+  stroke: #495057;
+}
+.right-arrow:hover {
+  stroke: white;
+}
+.reviews-btn {
+  max-width: 26%;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  font-weight: 900;
+  justify-self: flex-start;
+  border-radius: 1rem;
+  background-color: #dee2e6;
+  color: #868e96;
+  transition: all 0.8s;
+}
+.reviews-btn:hover {
+  color: #343a40;
+}
+.user-images-text {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 1rem;
+}
+.user-image {
+  border: 0.3rem solid white;
+  max-width: 7%;
+  border-radius: 100%;
+  margin-left: -0.8rem;
+}
+.Active-users {
+  padding-left: 1rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #82c91e;
 }
