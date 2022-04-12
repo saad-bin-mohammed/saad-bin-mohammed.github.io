@@ -1,5 +1,6 @@
 /* 
-maincolor:#b197fc
+maincolor: old one:#b197fc
+MAIN COLOR NEW:#95a4e9;
 tint color:#f3f0ff
 icon color:#5f3dc4 
 background-color:#e8e0fe*/
@@ -12,6 +13,7 @@ html {
   font-size: 62.5%;
   font-family: "Rubik", serif;
 }
+
 .header {
   margin-top: 1rem;
   display: flex;
@@ -25,8 +27,7 @@ html {
 .icon {
   width: 2.3rem;
   height: 2.9rem;
-  fill: #5f3dc4;
-  fill: #b197fc;
+  fill: #95a4e9;
 }
 .main-nav {
   display: flex;
@@ -50,7 +51,8 @@ html {
   color: black;
 }
 .download:link {
-  background-color: #9f88e3;
+  /* background-color: #9f88e3; */
+  background-color: #95a4e9;
   border-radius: 0.9rem;
   padding: 1rem 1.5rem;
   color: white;
@@ -62,16 +64,18 @@ html {
 }
 #download:hover {
   background-color: #d0bfff;
+  background-color: #aab6ed;
   color: black;
-  color: #868e96;
+  /* color: #868e96; */
 }
 
 .container {
   margin: 0 auto;
   padding: 2rem 4rem;
-  max-width: 120rem;
+  /* max-width: 120rem; */
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 4rem;
 }
 .hero-text {
   align-self: center;
@@ -81,7 +85,7 @@ html {
   gap: 4rem;
 }
 .hero-image {
-  justify-self: end;
+  justify-self: center;
   padding: 0 12rem;
 }
 .main-text {
@@ -95,21 +99,24 @@ html {
 .notification {
   display: inline-block;
   color: #b197fc;
+  color: #95a4e9;
   font-size: 5.2rem;
   font-weight: 1000;
 }
 .description {
   color: #adb5bd;
   font-size: 1.2rem;
-  line-height: 1.8;
+  line-height: 1.5;
 }
-.small {
-  color: #b197fc;
+.logo-text {
+  /* color: #b197fc; */
+  color: #95a4e9;
   font-size: 2.2rem;
   font-weight: 900;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .button-container {
+  /* background-color: #82c91e; */
   display: flex;
   gap: 3rem;
 }
@@ -117,35 +124,25 @@ html {
   max-width: 30%;
   text-decoration: none;
   padding: 1rem 2rem;
-  background-color: #b197fc;
-  font-size: 1.4rem;
+  /* background-color: #b197fc; */
+  background-color: #95a4e9;
+  font-size: 1.8rem;
   font-weight: 900;
   justify-self: flex-start;
   border-radius: 1rem;
-  box-shadow: 0 0.1rem 1.1rem 0 rgba(0, 0, 0, 0.438);
+  box-shadow: 0 0.5rem 1.1rem 0 rgba(0, 0, 0, 0.66);
   color: #495057;
-  transition: all 0.8s;
-  text-align: center;
+  transition: all 0.3s;
   display: flex;
-  gap: 0.2rem;
 }
 .main-btn:hover {
   color: white;
   stroke: white;
 }
-.right-arrow {
-  font-weight: 900;
-  height: 2rem;
-  width: 4rem;
-  stroke: #495057;
-}
-.right-arrow:hover {
-  stroke: white;
-}
 .reviews-btn {
   max-width: 26%;
   text-decoration: none;
-  padding: 1rem 3rem;
+  padding: 1rem 2rem 1rem 2rem;
   font-size: 1.4rem;
   font-weight: 900;
   justify-self: flex-start;
@@ -153,10 +150,12 @@ html {
   background-color: #dee2e6;
   color: #868e96;
   transition: all 0.8s;
+  align-self: center;
 }
 .reviews-btn:hover {
   color: #343a40;
 }
+
 .user-images-text {
   display: flex;
   align-items: center;
@@ -172,5 +171,41 @@ html {
   padding-left: 1rem;
   font-size: 1.8rem;
   font-weight: 700;
+  color: #9999;
+  color: #adb5bd;
+}
+.users-count {
   color: #82c91e;
+  margin-right: 0.7rem;
+}
+
+@media (max-width: 60em) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 20fr 20fr;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+  }
+  .hero-text {
+    gap: 1rem;
+  }
+  .user-image {
+    max-width: 5%;
+  }
+  .hero-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: end;
+    padding: 1rem 1rem;
+  }
+  .main-image {
+    max-width: 40%;
+  }
+  .navigation {
+    opacity: 0;
+  }
+  .header {
+    padding: 1rem 1rem 0 1rem;
+  }
 }
