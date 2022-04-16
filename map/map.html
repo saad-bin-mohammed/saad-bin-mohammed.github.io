@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work locator</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <link rel="stylesheet" href="map.css" />
+    <script defer src="map.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <ion-icon name="navigate-outline" class="map-icon"></ion-icon>
+        <p>work-Locator</p>
+      </nav>
+    </header>
+    <div class="centre-container">
+      <section class="main-section">
+        <section class="data-section">
+          <section class="input-section">
+            <h2 class="heading-secondary" data="3304">Enter your Work</h2>
+            <input type="text" class="text-input" />
+          </section>
+          <!-- <div class="content">
+            <div class="add-info">
+              <pcl>time</pcl>
+            </div>
+            <div class="main-content" data-set="3304">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corrupti amet repellat, architecto molestias repellendus
+                repudiandae vero blanditiis dolor, eaque perspiciatis illo
+                quaerat quidem fugit, pariatur ducimus? Tenetur molestiae minima
+                suscipit.
+              </p>
+            </div>
+          </div> -->
+        </section>
+        <div class="map-div" id="map"></div>
+      </section>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

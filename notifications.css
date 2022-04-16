@@ -3,7 +3,8 @@ maincolor: old one:#b197fc
 MAIN COLOR NEW:#95a4e9;
 tint color:#f3f0ff
 icon color:#5f3dc4 
-background-color:#e8e0fe*/
+background-color:#e8e0fe
+*/
 * {
   margin: 0;
   padding: 0;
@@ -179,7 +180,7 @@ html {
   margin-right: 0.7rem;
 }
 
-@media (max-width: 60em) {
+@media (max-width: 57em) {
   .container {
     grid-template-columns: 1fr;
     grid-template-rows: 20fr 20fr;
