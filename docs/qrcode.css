@@ -106,7 +106,7 @@ img {
 @media (max-width: 40em) {
   .container {
     padding: 2rem 1rem;
-    margin-top: 9rem;
+    margin-top: 12rem;
   }
   .heading-primary {
     font-size: 3.2rem;
@@ -116,7 +116,6 @@ img {
     font-size: 1.6rem;
   }
   .section-main {
-    /* width: 80vw; */
     gap: 1.2rem;
   }
 }
