@@ -119,3 +119,18 @@ img {
     gap: 1.2rem;
   }
 }
+@media (max-width: 25em) {
+  .heading-primary {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  .section-main {
+    gap: 2rem;
+  }
+  .heading-secondary {
+    font-size: 1.2rem;
+  }
+  .generate-button {
+    height: 6rem;
+  }
+}
