@@ -119,7 +119,7 @@ img {
     gap: 1.2rem;
   }
 }
-@media (max-width: 25em) {
+@media (max-width: 35em) {
   .section-main {
     width: 80vw;
     align-items: center;
