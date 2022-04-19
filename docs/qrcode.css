@@ -13,14 +13,14 @@ body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 .container {
-  margin-top: 5rem;
   padding: 2rem 2rem;
+  margin-top: 5rem;
   border-radius: 2rem;
-  border-radius: 29px;
+  border-radius: 2.9rem;
   background: white;
   box-shadow: 1.4rem 1.4rem 2.8rem rgba(0, 0, 0, 0.235),
     -1.4rem -1.4rem 2.8rem #ffffff;
-  border-radius: 24px;
+  border-radius: 2.4rem;
 }
 .section-main {
   width: 30vw;
@@ -69,10 +69,15 @@ body {
   justify-content: center;
   border: 0.2rem solid black;
   border-radius: 1rem;
+  cursor: pointer;
+}
+.image-container:hover {
+  zoom: 125%;
 }
 img {
   max-width: 100%;
 }
+
 .hide {
   opacity: 0;
   pointer-events: none;
@@ -100,7 +105,8 @@ img {
 }
 @media (max-width: 40em) {
   .container {
-    /* background-color: aquamarine; */
+    padding: 2rem 1rem;
+    margin-top: 9rem;
   }
   .heading-primary {
     font-size: 3.2rem;
@@ -110,6 +116,7 @@ img {
     font-size: 1.6rem;
   }
   .section-main {
+    /* width: 80vw; */
     gap: 1.2rem;
   }
 }
