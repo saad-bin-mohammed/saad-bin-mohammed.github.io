@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code Generator &mdash;Gernerate QR codes</title>
+    <link rel="stylesheet" href="qrcode.css" />
+    <link rel="icon" type="image/webp" href="favicon.jpg" />
+  </head>
+  <body>
+    <nav></nav>
+    <div class="container">
+      <section class="section-main">
+        <header>
+          <h1 class="heading-primary">QR Code Generator</h1>
+        </header>
+        <h3 class="heading-secondary">Enter a url or text to create QR code</h3>
+        <input
+          type="text"
+          placeholder="Enter text or url"
+          class="input-area"
+          id="input"
+        />
+        <button class="generate-button" id="button">Generate Code</button>
+        <div class="spinner hide" id="spinnerdiv"></div>
+        <div class="image-container hide" id="img_container">
+          <img src="qr.webp" alt="qrcode image" id="qrimg" class="hide" />
+        </div>
+      </section>
+    </div>
+    <script src="qrcode.js"></script>
+  </body>
+</html>
