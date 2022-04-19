@@ -21,6 +21,8 @@ body {
   box-shadow: 1.4rem 1.4rem 2.8rem rgba(0, 0, 0, 0.235),
     -1.4rem -1.4rem 2.8rem #ffffff;
   border-radius: 2.4rem;
+  background-color: #e9e6ff;
+  /* background-color: #f4f2ff; */
 }
 .section-main {
   width: 30vw;
@@ -28,6 +30,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   gap: 2rem;
+  /* background-color: #e9e6ff; */
 }
 .heading-primary {
   font-size: 4.2rem;
@@ -70,6 +73,7 @@ body {
   border: 0.2rem solid black;
   border-radius: 1rem;
   cursor: pointer;
+  background-color: white;
 }
 .image-container:hover {
   zoom: 125%;
@@ -126,21 +130,21 @@ img {
     justify-content: center;
   }
   .heading-primary {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
     margin-bottom: 1rem;
   }
   .section-main {
     gap: 2rem;
   }
   .heading-secondary {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     align-self: flex-start;
   }
   .generate-button {
     height: 6rem;
   }
   .input-area {
-    height: 8rem;
+    height: 6rem;
     font-size: 2rem;
   }
 }
