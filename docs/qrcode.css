@@ -58,6 +58,7 @@ body {
   background-color: #9381ff;
   color: white;
   border: 1rem solid #9381ff;
+  box-shadow: 0 0.1rem 1rem 0 rgba(0, 0, 0, 0.381);
 }
 .image-container {
   padding: 3rem 3rem;
@@ -95,5 +96,20 @@ img {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@media (max-width: 40em) {
+  .container {
+    /* background-color: aquamarine; */
+  }
+  .heading-primary {
+    font-size: 3.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .heading-secondary {
+    font-size: 1.6rem;
+  }
+  .section-main {
+    gap: 1.2rem;
   }
 }
