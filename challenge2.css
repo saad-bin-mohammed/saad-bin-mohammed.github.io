@@ -128,3 +128,10 @@ h2::after {
   border-radius: 5px;
   text-align: center;
 }
+#map {
+  height: 800px;
+  width: 800px;
+  margin-left: 30px;
+}
+/* //map */
+/* AIzaSyCGFCwEi4vdpCeZ06yrGpaB9-RWYCb88x4 */
