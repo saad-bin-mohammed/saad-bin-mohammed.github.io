@@ -98,7 +98,27 @@ img {
   animation: spin 1s linear infinite;
   align-self: center;
 }
-
+.alert {
+  padding: 3rem 3rem;
+  width: 100%;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2rem double #f03e3e;
+  border-radius: 1rem;
+  cursor: pointer;
+  background-color: #f03e3e;
+}
+.alert-message {
+  color: #ffe3e3;
+}
+.hide-alert {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  display: none;
+}
 @keyframes spin {
   0% {
     transform: rotate(0deg);
