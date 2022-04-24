@@ -11,8 +11,6 @@ body {
   align-items: center;
   justify-content: center;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  /* background-color: #9381ff; */
-  /* background-color: #b3a7ff; */
   /* background-color: #c9c0ff; */
 }
 .container {
@@ -142,6 +140,9 @@ img {
   .section-main {
     gap: 1.2rem;
   }
+  .image-container:hover {
+    overflow: hidden;
+  }
 }
 @media (max-width: 35em) {
   .section-main {
@@ -169,5 +170,8 @@ img {
   }
   .container {
     margin-top: 9rem;
+  }
+  .image-container:hover {
+    overflow: hidden;
   }
 }
