@@ -23,9 +23,9 @@ const generatecode = function () {
       spinnerdiv.classList.add("hide");
       img.src = ` https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${input.value}`;
     }, 1000);
-    setTimeout(() => {
-      input.value = "";
-    }, 2000);
+    // setTimeout(() => {
+    //   input.value = "";
+    // }, 2000);
   }
 };
 //////////////////////////////////////////////////////////////
