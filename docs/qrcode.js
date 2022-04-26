@@ -9,7 +9,6 @@ const generatecode = function () {
   let download_button = document.getElementById("download_button");
   let spinnerdiv = document.getElementById("spinnerdiv");
   if (!input.value) {
-    console.log("in if");
     alert_container.classList.remove("hide-alert");
     ////////////////////////////////////////
     ////////////////////////////////////////
