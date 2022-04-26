@@ -12,7 +12,8 @@ background-color:#e8e0fe
 }
 html {
   font-size: 62.5%;
-  font-family: "Rubik", serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* "Rubik", */
 }
 
 .header {
@@ -68,6 +69,8 @@ html {
   background-color: #aab6ed;
   color: black;
   /* color: #868e96; */
+}
+.ham-icon {
 }
 
 .container {
@@ -205,6 +208,7 @@ html {
   }
   .navigation {
     opacity: 0;
+    pointer-events: none;
   }
   .header {
     padding: 1rem 1rem 0 1rem;
