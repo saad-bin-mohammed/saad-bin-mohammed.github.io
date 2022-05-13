@@ -5,6 +5,9 @@ tint color:#f3f0ff
 icon color:#5f3dc4 
 background-color:#e8e0fe
 */
+body {
+  background-color: whitesmoke;
+}
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +16,6 @@ background-color:#e8e0fe
 html {
   font-size: 62.5%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  /* "Rubik", */
 }
 
 .header {
@@ -71,6 +73,9 @@ html {
   /* color: #868e96; */
 }
 .ham-icon {
+  opacity: 0;
+  pointer-events: none;
+  /* visibility: hidden; */
 }
 
 .container {
@@ -108,8 +113,10 @@ html {
   font-weight: 1000;
 }
 .description {
-  color: #adb5bd;
+  /* color: #adb5bd; */
+  color: #868e96;
   font-size: 1.2rem;
+  font-style: italic;
   line-height: 1.5;
 }
 .logo-text {
@@ -206,11 +213,18 @@ html {
   .main-image {
     max-width: 40%;
   }
-  .navigation {
+
+  .nav-links {
     opacity: 0;
     pointer-events: none;
+    visibility: hidden;
   }
   .header {
     padding: 1rem 1rem 0 1rem;
+  }
+  .ham-icon {
+    opacity: 1;
+    pointer-events: all;
+    justify-self: flex-end;
   }
 }

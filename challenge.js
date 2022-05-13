@@ -36,13 +36,25 @@ const getNews = (async function () {
   let mapdiv = document.getElementById("map");
   art.forEach(function (value, index) {
     // console.log(`the actual content for each  is ${value.content}`);
-    console.log(`title is ${value.title}`);
+    // console.log(`title is ${value.title}`);
+    // console.log(`${value.description}`);
+    const desc = value.content;
+    // const sorting = desc[desc.length - 1];
+    const url = value.url;
+    // console.log(desc.indexOf("["));
+    // console.log(desc.indexOf("]"));
+    const substr = desc.slice(desc.indexOf("["));
+    console.log(desc);
+    const replace = desc.replace("[", url);
+    // console.log(replace);
     const html = ` 
     <div class="news-container">
     <div class="news-div">
       <img id="image" src="${value.urlToImage}" alt="image" >
-      <h1 class="news-description news-title">${value.description}</h1>
-      <p class="news">${value.content}</p>
+      <h1 class="news-description news-title">${value.title}</h1>
+      <p class="news-content">${value.content}</p>
+      <hr>
+      <p class="news">${value.description}</p>
       <a href="${value.url}">see more</a>
     </div>
     </div>`;
