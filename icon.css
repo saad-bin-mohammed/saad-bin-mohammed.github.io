@@ -1,0 +1,65 @@
+body {
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.container {
+  margin-top: 10rem;
+  /* height: 50vh; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* width: 50%; */
+  gap: 3rem;
+  display: flex;
+  margin-top: 5rem;
+  /* background-color: antiquewhite; */
+}
+.icon-container {
+  padding: 2rem 2rem;
+  border-radius: 1rem;
+  /* background-color: #0072b1; */
+  box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.71);
+}
+.text-main {
+  color: white;
+  font-size: 13rem;
+}
+.text-uber {
+  font-size: 15rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.bg-black {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.bg-inblue {
+  background-color: #0072b1;
+}
+.bg-nmblue {
+  background-color: #95a4e9;
+}
+.text-nm {
+  color: rgba(0, 0, 139, 0.909);
+}
+.bg-si {
+  background-color: #5a5b5d;
+}
+.text-si {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: #556997;
+}
+.bg-pp {
+  background-color: #4527a0;
+}
