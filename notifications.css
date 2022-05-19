@@ -145,6 +145,7 @@ html {
   color: #495057;
   transition: all 0.3s;
   display: flex;
+  border: 0.25rem solid rgba(0, 0, 0, 0.66);
 }
 .main-btn:hover {
   color: white;
