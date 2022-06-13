@@ -63,3 +63,28 @@ html {
 .bg-pp {
   background-color: #4527a0;
 }
+.plane-container {
+  padding: 3rem;
+  background-color: rgba(211, 211, 211, 0.326);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2rem 1rem 0 rgba(0, 0, 0, 0.26);
+  opacity: 0.4;
+}
+.airplane-icon {
+  transform: rotate(269deg);
+  height: 5rem;
+  width: 5rem;
+  color: #0072b1;
+  opacity: 0.4;
+  /* position: absolute; */
+  animation: active;
+}
+@keyframes active {
+  0% {
+    top: 40%;
+  }
+  100% {
+    top: 100%;
+  }
+}

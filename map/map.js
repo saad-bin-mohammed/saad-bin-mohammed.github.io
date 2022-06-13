@@ -1,5 +1,5 @@
 const input = document.querySelector("input");
-let StorageArray = ["item1", "item2", "item3"];
+// let StorageArray = ["item1", "item2", "item3"];
 let inputSection = document.querySelector(".input-section");
 // try {
 //   let getLocalItem = localStorage.getItem(StorageArray[0]);
