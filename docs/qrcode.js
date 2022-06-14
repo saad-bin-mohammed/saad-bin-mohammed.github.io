@@ -14,17 +14,17 @@ const generatecode = function () {
     ////////////////////////////////////////
     img_container.classList.add("hide");
   } else {
-    spinnerdiv.classList.remove("hide");
-    setTimeout(() => {
+    img.onload = function () {
+      console.log("on loaded");
       img_container.classList.remove("hide");
       alert_container.classList.add("hide-alert");
+      console.log("on loaded second");
       img.classList.remove("hide");
       spinnerdiv.classList.add("hide");
-      img.src = ` https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${input.value}`;
-    }, 1000);
-    // setTimeout(() => {
-    //   input.value = "";
-    // }, 2000);
+    };
+    spinnerdiv.classList.remove("hide");
+
+    img.src = ` https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${input.value}`;
   }
 };
 //////////////////////////////////////////////////////////////
