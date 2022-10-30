@@ -11,18 +11,16 @@ body {
   align-items: center;
   justify-content: center;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  background-color: #e6e6e6;
+  background-color: #e9ecef;
 }
 .container {
   padding: 2rem 2rem;
   margin-top: 5rem;
   border-radius: 2rem;
   border-radius: 2.9rem;
-  background: white;
-  box-shadow: 2rem 2rem 4rem rgba(0, 0, 0, 0.123),
-    0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.356);
-  border-radius: 1.2rem;
-  background-color: whitesmoke;
+  box-shadow: 0.1rem 0.1rem 0.43rem 0.1rem rgba(0, 0, 0, 0.235);
+  border-radius: 2.4rem;
+  background-color: #f8f9fa;
 }
 .section-main {
   width: 30vw;
@@ -38,7 +36,6 @@ body {
   align-self: center;
 }
 .heading-secondary {
-  font-size: 1.8rem;
   font-size: 2rem;
   color: #868e96;
   font-family: "Times New Roman", Times, serif;
@@ -50,17 +47,20 @@ body {
   padding: 0 1rem;
   border-radius: 1rem;
 }
+.input-area:focus {
+  outline: none;
+}
 .generate-button {
   align-self: center;
   cursor: pointer;
   width: 99%;
-  height: 4rem;
+  height: 6rem;
   border-radius: 1rem;
   font-size: 1.8rem;
   background-color: #9381ff;
-  color: white;
+  color: #f3f3f3;
   border: 1rem solid #9381ff;
-  box-shadow: 0 0.1rem 1rem 0 rgba(0, 0, 0, 0.381);
+  box-shadow: 0 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.381);
 }
 .image-container {
   padding: 3rem 3rem;
@@ -72,7 +72,7 @@ body {
   border: 0.2rem solid black;
   border-radius: 1rem;
   cursor: pointer;
-  background-color: white;
+  background-color: #f8f9fa;
 }
 .image-container:hover {
   zoom: 125%;
