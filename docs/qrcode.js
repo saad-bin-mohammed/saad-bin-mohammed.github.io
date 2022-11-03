@@ -4,6 +4,7 @@ let img = document.getElementById("qrimg");
 let img_container = document.getElementById("img_container");
 let input = document.getElementById("input");
 let download_button = document.getElementById("download_button");
+let share = document.getElementById("share");
 let source;
 const generatecode = function () {
   let input = document.getElementById("input");
@@ -17,15 +18,14 @@ const generatecode = function () {
       img_container.classList.remove("hide");
       img.classList.remove("hide");
       spinnerdiv.classList.add("hide");
+      download_button.classList.remove("hide");
+      share.classList.remove("hide");
     };
     spinnerdiv.classList.remove("hide");
     img.src = ` https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(
       input.value
     )}`;
     source = img.src;
-    setTimeout(() => {
-      download_button.classList.remove("hide");
-    }, "1000");
   }
 };
 
@@ -53,4 +53,22 @@ function fetchFile(url) {
       a.click();
       a.remove();
     });
+}
+share.addEventListener("click", function () {
+  shareImage();
+});
+/////////////////////////////////////
+async function shareImage() {
+  const response = await fetch(source);
+  const blob = await response.blob();
+  const filesArray = [
+    new File([blob], "qrimage.jpg", {
+      type: "image/jpeg",
+      lastModified: new Date().getTime(),
+    }),
+  ];
+  const shareData = {
+    files: filesArray,
+  };
+  navigator.share(shareData);
 }

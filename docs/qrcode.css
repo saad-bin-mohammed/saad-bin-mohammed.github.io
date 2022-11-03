@@ -30,7 +30,7 @@ body {
   align-items: flex-start;
   gap: 2rem;
 }
-.heading-primary {
+.heading {
   font-size: 4.2rem;
   margin-bottom: 1rem;
   color: #9381ff;
@@ -80,7 +80,6 @@ body {
 }
 
 .download-btn {
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -94,7 +93,6 @@ body {
   border: none;
   color: #f8f9fa;
   transition: all 0.3s;
-  align-self: flex-start;
   background-image: linear-gradient(to right, #9e8eff 21%, #9381ff 100%);
 }
 .download-btn:hover {
@@ -107,6 +105,17 @@ body {
   height: 2.5rem;
   width: 2.5rem;
   color: #f8f9fa;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  align-self: center;
+}
+#share {
+  background-color: #84a9ac;
+  background-image: none;
 }
 img {
   max-width: 100%;
@@ -136,19 +145,20 @@ img {
     transform: rotate(360deg);
   }
 }
-@media (max-width: 40em) {
+/* @media (max-width:55em) {
+  
+} */
+@media (max-width: 60em) {
   .container {
     padding: 2rem 1rem;
     margin-top: 6rem;
   }
-  .heading-primary {
+  .heading {
     font-size: 3.2rem;
     margin-bottom: 0.5rem;
   }
-  .heading-secondary {
-    font-size: 1.6rem;
-  }
   .section-main {
+    width: 65vw;
     gap: 1.2rem;
   }
   .image-container:hover {
@@ -164,7 +174,8 @@ img {
     height: 2.5rem;
     font-weight: 200;
   }
-  .download-icon {
+  .download-icon,
+  .share-icon {
     height: 2rem;
     width: 2rem;
   }
@@ -174,17 +185,11 @@ img {
     width: 80vw;
     align-items: center;
     justify-content: center;
-  }
-  .heading-primary {
-    font-size: 2.6rem;
-    margin-bottom: 1rem;
-  }
-  .section-main {
     gap: 2rem;
   }
-  .heading-secondary {
-    font-size: 1.6rem;
-    align-self: flex-start;
+  .heading {
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
   }
   .generate-button {
     height: 6rem;
@@ -200,8 +205,8 @@ img {
     font-weight: 300;
     padding: 2rem;
   }
-
-  .image-container:hover {
-    overflow: hidden;
+  .buttons {
+    justify-content: space-between;
+    /* width: 50%; */
   }
 }

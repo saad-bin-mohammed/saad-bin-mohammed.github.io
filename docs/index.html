@@ -20,7 +20,7 @@
     <div class="container">
       <section class="section-main">
         <header>
-          <h1 class="heading-primary">QR Code Generator</h1>
+          <h1 class="heading">QR Code Generator</h1>
         </header>
         <input
           type="text"
@@ -34,12 +34,20 @@
         <div class="image-container hide" id="img_container">
           <img src="qr.webp" alt="Qrcode image" id="qrimg" class="hide" />
         </div>
-        <button class="download-btn hide" id="download_button">
-          Download<ion-icon
-            name="arrow-down-circle-outline"
-            class="download-icon"
-          ></ion-icon>
-        </button>
+        <div class="buttons">
+          <button class="download-btn hide" id="download_button">
+            Download<ion-icon
+              name="arrow-down-circle-outline"
+              class="download-icon"
+            ></ion-icon>
+          </button>
+          <button class="download-btn hide" id="share">
+            Share<ion-icon
+              name="share-social-outline"
+              class="share-icon"
+            ></ion-icon>
+          </button>
+        </div>
       </section>
     </div>
     <script src="qrcode.js"></script>
