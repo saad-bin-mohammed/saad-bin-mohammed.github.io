@@ -4,18 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
     <title>QR Code Generator &mdash;Generate QR codes</title>
     <link rel="stylesheet" href="qrcode.css" />
-    <link rel="icon" type="image/webp" href="favicon.jpg" />
+    <link rel="icon" type="image/webp" href="qr-image.jpg" />
   </head>
   <body>
-    <nav></nav>
     <div class="container">
       <section class="section-main">
         <header>
           <h1 class="heading-primary">QR Code Generator</h1>
         </header>
-        <h3 class="heading-secondary">Enter a url or text to create QR code</h3>
         <input
           type="text"
           placeholder="Enter text or url"
@@ -28,12 +34,14 @@
         <div class="image-container hide" id="img_container">
           <img src="qr.webp" alt="Qrcode image" id="qrimg" class="hide" />
         </div>
-        <div class="alert hide-alert" id="alert_container">
-          <h2 class="alert-message">Oops No Input Found!</h2>
-        </div>
+        <button class="download-btn hide" id="download_button">
+          Download<ion-icon
+            name="arrow-down-circle-outline"
+            class="download-icon"
+          ></ion-icon>
+        </button>
       </section>
     </div>
     <script src="qrcode.js"></script>
   </body>
 </html>
-<!-- news api key e851596fbddd4eeb8c50075d43ebf545 -->

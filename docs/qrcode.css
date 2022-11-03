@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -10,8 +11,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   background-color: #e9ecef;
+  font-family: "Roboto Slab", serif;
 }
 .container {
   padding: 2rem 2rem;
@@ -35,17 +36,16 @@ body {
   color: #9381ff;
   align-self: center;
 }
-.heading-secondary {
-  font-size: 2rem;
-  color: #868e96;
-  font-family: "Times New Roman", Times, serif;
-}
 .input-area {
   width: 100%;
   height: 4rem;
   font-size: 1.6rem;
   padding: 0 1rem;
   border-radius: 1rem;
+  border: none;
+  outline: none;
+  background-color: #e9ecef;
+  box-shadow: -0.01rem 0.1rem 0.2rem 0.2rem rgba(0, 0, 0, 0.164);
 }
 .input-area:focus {
   outline: none;
@@ -56,11 +56,15 @@ body {
   width: 99%;
   height: 6rem;
   border-radius: 1rem;
-  font-size: 1.8rem;
+  font-size: 2rem;
   background-color: #9381ff;
   color: #f3f3f3;
   border: 1rem solid #9381ff;
   box-shadow: 0 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.381);
+}
+.generate-button:active,
+.generate-button:hover {
+  transform: scale(0.98);
 }
 .image-container {
   padding: 3rem 3rem;
@@ -74,8 +78,34 @@ body {
   cursor: pointer;
   background-color: #f8f9fa;
 }
-.image-container:hover {
-  zoom: 125%;
+
+.download-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  font-size: 2rem;
+  height: 3rem;
+  gap: 0.5rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  font-weight: 100;
+  border: none;
+  margin-left: 1rem;
+  color: #f8f9fa;
+  transition: all 0.3s;
+  align-self: flex-start;
+  background-image: linear-gradient(to right, #9e8eff 21%, #9381ff 100%);
+}
+.download-btn:hover {
+  box-shadow: 0 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.381);
+}
+.download-btn:active {
+  transform: scale(0.98);
+}
+.download-icon {
+  height: 2.5rem;
+  width: 2.5rem;
 }
 img {
   max-width: 100%;
@@ -97,27 +127,6 @@ img {
   animation: spin 1s linear infinite;
   align-self: center;
 }
-.alert {
-  padding: 3rem 3rem;
-  width: 100%;
-  align-self: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2rem double #f03e3e;
-  border-radius: 1rem;
-  cursor: pointer;
-  background-color: #f03e3e;
-}
-.alert-message {
-  color: #ffe3e3;
-}
-.hide-alert {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-  display: none;
-}
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -129,7 +138,7 @@ img {
 @media (max-width: 40em) {
   .container {
     padding: 2rem 1rem;
-    margin-top: 12rem;
+    margin-top: 6rem;
   }
   .heading-primary {
     font-size: 3.2rem;
@@ -143,6 +152,19 @@ img {
   }
   .image-container:hover {
     overflow: hidden;
+  }
+  .generate-button {
+    height: 5rem;
+  }
+  .download-btn {
+    margin-left: 0.2rem;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    height: 2.5rem;
+  }
+  .download-icon {
+    height: 2rem;
+    width: 2rem;
   }
 }
 @media (max-width: 35em) {
