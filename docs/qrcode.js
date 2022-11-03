@@ -19,7 +19,9 @@ const generatecode = function () {
       spinnerdiv.classList.add("hide");
     };
     spinnerdiv.classList.remove("hide");
-    img.src = ` https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${input.value}`;
+    img.src = ` https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(
+      input.value
+    )}`;
     source = img.src;
     setTimeout(() => {
       download_button.classList.remove("hide");
