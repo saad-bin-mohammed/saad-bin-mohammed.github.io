@@ -12,6 +12,7 @@ const generatecode = function () {
   if (!input.value) {
     img_container.classList.add("hide");
     download_button.classList.add("hide");
+    share.classList.add("hide");
     return;
   } else {
     img.onload = function () {
