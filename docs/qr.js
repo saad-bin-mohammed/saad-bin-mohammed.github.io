@@ -66,15 +66,17 @@ section.addEventListener("click", function (e) {
     });
   }
   if (e.target.classList.contains("share-btn")) {
-    const filesArray = [
-      new File([blob], "qrimage.jpg", {
-        type: "image/jpeg",
-        lastModified: new Date().getTime(),
-      }),
-    ];
-    const shareData = {
-      files: filesArray,
-    };
-    navigator.share(shareData);
+    blob.then((blob) => {
+      const filesArray = [
+        new File([blob], "qrimage.jpg", {
+          type: "image/jpeg",
+          lastModified: new Date().getTime(),
+        }),
+      ];
+      const shareData = {
+        files: filesArray,
+      };
+      navigator.share(shareData);
+    });
   }
 });
