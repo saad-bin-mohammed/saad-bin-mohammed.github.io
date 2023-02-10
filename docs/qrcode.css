@@ -50,7 +50,7 @@ body {
 .input-area:focus {
   outline: none;
 }
-.generate-button {
+.generate-code-button {
   align-self: center;
   cursor: pointer;
   width: 99%;
@@ -62,8 +62,8 @@ body {
   border: 1rem solid #9381ff;
   box-shadow: 0 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.381);
 }
-.generate-button:active,
-.generate-button:hover {
+.generate-code-button:active,
+.generate-code-button:hover {
   transform: scale(0.98);
 }
 .image-container {
@@ -78,8 +78,17 @@ body {
   cursor: pointer;
   background-color: #f8f9fa;
 }
-
-.download-btn {
+.main_div {
+  width: 100%;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.download-btn,
+.share-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -95,10 +104,12 @@ body {
   transition: all 0.3s;
   background-image: linear-gradient(to right, #9e8eff 21%, #9381ff 100%);
 }
-.download-btn:hover {
+.download-btn:hover,
+.share-btn:hover {
   box-shadow: 0 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.381);
 }
-.download-btn:active {
+.download-btn:active,
+.share-btn:active {
   transform: scale(0.98);
 }
 .download-icon {
@@ -113,7 +124,7 @@ body {
   gap: 1rem;
   align-self: center;
 }
-#share {
+.share {
   background-color: #84a9ac;
   background-image: none;
 }
@@ -164,7 +175,7 @@ img {
   .image-container:hover {
     overflow: hidden;
   }
-  .generate-button {
+  .generate-code-button {
     height: 5rem;
   }
   .download-btn {
@@ -191,7 +202,7 @@ img {
     font-size: 2.6rem;
     margin-bottom: 1rem;
   }
-  .generate-button {
+  .generate-code-button {
     height: 6rem;
   }
   .input-area {
