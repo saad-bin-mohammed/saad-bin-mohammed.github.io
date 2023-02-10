@@ -75,7 +75,6 @@ section.addEventListener("click", function (e) {
     const shareData = {
       files: filesArray,
     };
-    if (navigator.share && navigator.canShare(shareData))
-      navigator.share(shareData);
+    navigator.share(shareData);
   }
 });
