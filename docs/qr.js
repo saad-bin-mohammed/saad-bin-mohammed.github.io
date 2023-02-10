@@ -67,8 +67,8 @@ section.addEventListener("click", function (e) {
   }
   if (e.target.classList.contains("share-btn")) {
     const filesArray = [
-      new File([blob], "qrimage.jpg", {
-        type: "image/jpeg",
+      new File([blob], "qrimage.png", {
+        type: "image/png",
         lastModified: new Date().getTime(),
       }),
     ];
