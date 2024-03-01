@@ -20,9 +20,11 @@
       <header>
         <h1 class="heading">QR Code Generator</h1>
       </header>
-      <input type="text" placeholder="Enter text or url..." class="input-area" required />
-      <button class="generate-code-button">Generate Code</button>
-      <div class="spinner hide"></div>
+      <form id="qrForm">
+        <input type="text" placeholder="Enter text or url..." class="input-area" name="input" required />
+        <button class="generate-code-button" type="submit">Generate Code</button>
+        <div class="spinner hide"></div>
+      </form>
     </section>
   </div>
   <script src="qrCode.js"></script>
