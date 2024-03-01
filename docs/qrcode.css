@@ -73,7 +73,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 0.2rem solid black;
+  border: 0.2rem solid rgba(0, 0, 0, 0.164);
   border-radius: 1rem;
   cursor: pointer;
   background-color: #f8f9fa;
@@ -178,13 +178,7 @@ img {
   .generate-code-button {
     height: 5rem;
   }
-  .download-btn {
-    margin: 0, auto;
-    padding: 1.5rem;
-    font-size: 1.8rem;
-    height: 2.5rem;
-    font-weight: 200;
-  }
+
   .download-icon,
   .share-icon {
     height: 2rem;

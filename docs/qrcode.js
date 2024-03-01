@@ -1,51 +1,64 @@
-"use strict";
-let button = document.getElementById("button");
-let img = document.getElementById("qrimg");
-let img_container = document.getElementById("img_container");
-let input = document.getElementById("input");
-let download_button = document.getElementById("download_button");
-let share = document.getElementById("share");
-let source;
-const generatecode = function () {
-  let input = document.getElementById("input");
-  let spinnerdiv = document.getElementById("spinnerdiv");
-  if (!input.value) {
-    img_container.classList.add("hide");
-    download_button.classList.add("hide");
-    share.classList.add("hide");
-    return;
-  } else {
-    img.onload = function () {
-      img_container.classList.remove("hide");
-      img.classList.remove("hide");
-      spinnerdiv.classList.add("hide");
-      download_button.classList.remove("hide");
-      share.classList.remove("hide");
-    };
-    spinnerdiv.classList.remove("hide");
-    img.src = ` https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(
+let input = document.querySelector(".input-area");
+let section = document.querySelector("section");
+let spinner = document.querySelector(".spinner");
+let generate_button = document.querySelector(".generate-code-button");
+let blob;
+generate_button.addEventListener("click", function fetch() {
+  input.value ? fetchdata() : null;
+});
+input?.addEventListener("keypress", (e) => {
+  if (e.key == "Enter") {
+    if (input.value) {
+      fetchdata();
+    } else {
+      document.querySelector(".main_div")?.remove();
+    }
+  }
+});
+const fetchdata = async function () {
+  spinner.classList.remove("hide");
+  const response = await fetch(
+    ` https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(
       input.value
-    )}`;
-    source = img.src;
+    )}`
+  );
+  blob = response.blob();
+  let main_div = document.querySelector(".main_div");
+  if (main_div) {
+    main_div.querySelector("img").src = response.url;
+    spinner.classList.add("hide");
+  } else {
+    let html = `
+      <div class="main_div">
+           <div class="image-container" id="img_container">
+                    <img src="${response.url}" alt="qrcodeimage" >;
+            </div>
+            <div class="buttons">
+                <button class="download-btn" id="download_button">
+                   Download<ion-icon
+                     name="arrow-down-circle-outline"
+                     class="download-icon"
+                   ></ion-icon>
+                </button>
+                <button class="share-btn share" id="share">
+                   Share<ion-icon
+                     name="share-social-outline"
+                     class="share-icon"
+                   ></ion-icon>
+                </button>
+            </div>
+      </div>
+            `;
+    spinner.classList.add("hide");
+    spinner.insertAdjacentHTML("afterend", html);
+    addListeners(blob);
   }
 };
-
-//////////////////////////////////////////////////////////////
-// EVENT LISTENERS ON BUTTON AND INPUT FIELD(WHEN ENTER IS PRESSED)
-button.addEventListener("click", generatecode); //listening to click event on [generate code  button]
-//listening to keypress event on [text input field]
-input.addEventListener("keypress", function (e) {
-  if (e.key == "Enter") {
-    generatecode();
-  }
-});
-download_button.addEventListener("click", function () {
-  fetchFile(source);
-});
-function fetchFile(url) {
-  fetch(url)
-    .then((res) => res.blob())
-    .then((file) => {
+function addListeners(blob) {
+  let download_button = document.querySelector("#download_button");
+  let share_button = document.querySelector(".share-btn ");
+  download_button.addEventListener("click", () => {
+    blob.then((file) => {
       let locator = URL.createObjectURL(file);
       let a = document.createElement("a");
       a.href = locator;
@@ -54,22 +67,21 @@ function fetchFile(url) {
       a.click();
       a.remove();
     });
-}
-share.addEventListener("click", function () {
-  shareImage();
-});
-/////////////////////////////////////
-async function shareImage() {
-  const response = await fetch(source);
-  const blob = await response.blob();
-  const filesArray = [
-    new File([blob], "qrimage.jpg", {
-      type: "image/jpeg",
-      lastModified: new Date().getTime(),
-    }),
-  ];
-  const shareData = {
-    files: filesArray,
-  };
-  navigator.share(shareData);
+  });
+  share_button.addEventListener("click", () => {
+    blob.then((blob) => {
+      const filesArray = [
+        new File([blob], "qrimage.jpg", {
+          type: "image/jpeg",
+          lastModified: new Date().getTime(),
+        }),
+      ];
+      const shareData = {
+        files: filesArray,
+      };
+      if (navigator.share && navigator.canShare(shareData)) {
+        navigator.share(shareData);
+      }
+    });
+  });
 }
