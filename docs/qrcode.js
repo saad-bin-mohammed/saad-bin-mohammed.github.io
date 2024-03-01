@@ -1,11 +1,9 @@
 let spinner = document.querySelector(".spinner");
 let form = document.querySelector("form");
-let blob;
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  let formData = new FormData(form);
-  fetchdata(formData.get("input"));
+  fetchdata(new FormData(form).get("input"));
 });
 const fetchdata = async function (input) {
   spinner.classList.remove("hide");
@@ -14,13 +12,13 @@ const fetchdata = async function (input) {
       input
     )}`
   );
-  blob = response.blob();
+  console.log(response);
   let generatedImage = document.querySelector("#generatedImage");
   if (generatedImage) {
     generatedImage.src = response.url;
   } else {
     spinner.insertAdjacentHTML("afterend", generateHtml(response.url));
-    addListeners(blob);
+    addListeners(response.blob());
   }
   spinner.classList.add("hide");
 };

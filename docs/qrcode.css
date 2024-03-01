@@ -13,39 +13,42 @@ body {
   justify-content: center;
   background-color: #e9ecef;
   font-family: "Roboto Slab", serif;
+  padding: 2rem;
+  padding-top: 4rem;
 }
 .container {
   padding: 2rem 2rem;
-  margin-top: 5rem;
-  border-radius: 2rem;
-  border-radius: 2.9rem;
-  box-shadow: 0.1rem 0.1rem 0.43rem 0.1rem rgba(0, 0, 0, 0.235);
-  border-radius: 2.4rem;
+  border: 0.1rem solid #c1c2c34e;
+  border-radius: 2.1rem;
   background-color: #f8f9fa;
 }
+.section-main {
+  display: flex;
+  flex-direction: column;
+}
 form {
-  width: 30vw;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1.5rem;
+  margin-top: 2rem;
 }
 .heading {
   font-size: 4.2rem;
-  margin-bottom: 3rem;
   color: #9381ff;
   align-self: center;
+  padding-bottom: 1rem;
+  border-bottom: 0.2rem solid rgba(0, 0, 0, 0.164);
 }
 .input-area {
   width: 100%;
-  height: 4rem;
-  font-size: 1.6rem;
-  padding: 0 1rem;
+  font-size: 1.8rem;
+  padding: 1.5rem;
   border-radius: 1rem;
   border: none;
   outline: none;
   background-color: #e9ecef;
-  box-shadow: -0.01rem 0.1rem 0.2rem 0.2rem rgba(0, 0, 0, 0.164);
+  box-shadow: -0.01rem 0.1rem 0.2rem 0.2rem rgba(0, 0, 0, 0.074);
 }
 .input-area:focus {
   outline: none;
@@ -53,14 +56,13 @@ form {
 .generate-code-button {
   align-self: center;
   cursor: pointer;
-  width: 99%;
-  height: 6rem;
+  width: 100%;
+  padding: 1.5rem;
   border-radius: 1rem;
   font-size: 2rem;
   background-color: #9381ff;
   color: #f3f3f3;
-  border: 1rem solid #9381ff;
-  box-shadow: 0 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.381);
+  border: none;
 }
 .generate-code-button:active,
 .generate-code-button:hover {
@@ -153,64 +155,5 @@ img {
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-/* @media (max-width:55em) {
-  
-} */
-@media (max-width: 60em) {
-  .container {
-    padding: 2rem 1rem;
-    margin-top: 6rem;
-  }
-  .heading {
-    font-size: 3.2rem;
-    margin-bottom: 0.5rem;
-  }
-  form {
-    width: 65vw;
-    gap: 1.2rem;
-  }
-  .image-container:hover {
-    overflow: hidden;
-  }
-  .generate-code-button {
-    height: 5rem;
-  }
-
-  .download-icon,
-  .share-icon {
-    height: 2rem;
-    width: 2rem;
-  }
-}
-@media (max-width: 35em) {
-  form {
-    width: 80vw;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-  }
-  .heading {
-    font-size: 2.6rem;
-    margin-bottom: 1rem;
-  }
-  .generate-code-button {
-    height: 6rem;
-  }
-  .input-area {
-    height: 6rem;
-    font-size: 2rem;
-  }
-  .container {
-    margin-top: 9rem;
-  }
-  .download-btn {
-    font-weight: 300;
-    padding: 2rem;
-  }
-  .buttons {
-    justify-content: space-between;
-    /* width: 50%; */
   }
 }
