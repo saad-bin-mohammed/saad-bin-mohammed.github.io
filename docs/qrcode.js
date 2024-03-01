@@ -1,6 +1,5 @@
 let spinner = document.querySelector(".spinner");
 let form = document.querySelector("form");
-
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   fetchdata(new FormData(form).get("input"));
