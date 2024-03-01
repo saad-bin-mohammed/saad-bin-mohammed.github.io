@@ -16,13 +16,17 @@ body {
   padding: 2rem;
   padding-top: 4rem;
 }
+.flex-all-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .container {
   padding: 2rem;
-  border: 0.1rem solid #c1c2c34e;
+  border: 0.11rem solid #ced4da;
   border-radius: 2rem;
   background-color: #f8f9fa;
 }
-
 form {
   display: flex;
   flex-direction: column;
@@ -34,7 +38,7 @@ form {
   color: #9381ff;
   align-self: center;
   padding-bottom: 1rem;
-  border-bottom: 0.2rem solid rgba(0, 0, 0, 0.164);
+  border-bottom: 0.02rem solid #ced4da;
 }
 .input-area {
   width: 100%;
@@ -43,8 +47,8 @@ form {
   border-radius: 1rem;
   border: none;
   outline: none;
-  background-color: #e9ecef;
-  box-shadow: -0.01rem 0.1rem 0.2rem 0.2rem rgba(0, 0, 0, 0.074);
+  color: #212529;
+  border: 0.08rem solid #ced4da;
 }
 .input-area:focus {
   outline: none;
@@ -65,34 +69,22 @@ form {
   transform: scale(0.98);
 }
 .image-container {
-  padding: 3rem 3rem;
+  padding: 3rem;
   width: 100%;
-  align-self: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 0.2rem solid rgba(0, 0, 0, 0.164);
   border-radius: 1rem;
   cursor: pointer;
   background-color: #f8f9fa;
+  border: 0.11rem solid #ced4da;
 }
-.main_div {
+.generatedContainer {
   width: 100%;
-  align-self: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
   gap: 2rem;
 }
 .download-btn,
 .share-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
+  padding: 1rem;
   font-size: 2rem;
-  height: 3rem;
   gap: 0.5rem;
   cursor: pointer;
   border-radius: 0.5rem;
@@ -104,12 +96,9 @@ form {
 }
 .download-btn:hover,
 .share-btn:hover {
-  box-shadow: 0 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.381);
+  scale: 1.05;
 }
-.download-btn:active,
-.share-btn:active {
-  transform: scale(0.98);
-}
+
 .download-icon {
   height: 2.5rem;
   width: 2.5rem;
