@@ -142,3 +142,7 @@ img {
     transform: rotate(360deg);
   }
 }
+
+.fa-solid {
+  font-size: 18px;
+}
