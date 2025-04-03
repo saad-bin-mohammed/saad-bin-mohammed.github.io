@@ -60,16 +60,10 @@ function generateHtml(url) {
         </div>
         <div class="buttons">
             <button class="download-btn flex-all-center" id="download_button">
-               Download<ion-icon
-                 name="arrow-down-circle-outline"
-                 class="download-icon"
-               ></ion-icon>
+               Download <i class="fa-solid fa-download"></i>
             </button>
             <button class="share-btn share flex-all-center" id="share">
-               Share<ion-icon
-                 name="share-social-outline"
-                 class="share-icon"
-               ></ion-icon>
+               Share <i class="fa-solid fa-share"></i>
             </button>
         </div>
   </div>
