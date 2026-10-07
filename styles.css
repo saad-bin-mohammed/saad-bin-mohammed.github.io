@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base */
+body {
+  background: #fbfbf9;
+  color: #2b2523;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+a:hover {
+  opacity: 0.7;
+}
+b,
+strong {
+  font-weight: 700;
+}
+
+/* Layout: two columns */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+  column-gap: 48px;
+  padding: 80px 24px 120px;
+}
+
+/* Headings */
+h1,
+h2 {
+  font-weight: 400;
+  line-height: 1.3;
+}
+h1 {
+  font-size: 28px;
+  margin-bottom: 28px;
+}
+h2 {
+  font-size: 24px;
+  margin-bottom: 22px;
+}
+
+/* Sections */
+section {
+  margin-top: 60px;
+}
+
+/* Lists with small square bullets */
+ul {
+  list-style: none;
+}
+li {
+  position: relative;
+  padding-left: 10px;
+  margin-bottom: 14px;
+  font-size: 18px;
+  line-height: 1.7;
+}
+li::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 11px;
+  width: 6px;
+  height: 6px;
+  background: #cfcac5;
+}
+li ul {
+  margin: 10px 0 0 10px;
+}
+li li {
+  margin-bottom: 8px;
+}
+
+.muted {
+  color: #aaa39d;
+}
+code {
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+}
+
+/* Sidebar */
+.about {
+  overflow: hidden;
+}
+.avatar {
+  float: left;
+  width: 78px;
+  height: 78px;
+  margin: 4px 18px 6px 0;
+  border-radius: 50%;
+  background: #4a403c;
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  line-height: 78px;
+}
+.about p {
+  font-size: 15px;
+  line-height: 1.85;
+  text-align: left;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #e8e5e0;
+  margin: 21px 0 20px;
+}
+.social {
+  display: flex;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: minmax(0, 520px);
+    row-gap: 64px;
+    padding: 48px 20px 80px;
+  }
+}

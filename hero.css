@@ -1,0 +1,53 @@
+.hero h1 {
+  font-size: 38px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: #050816;
+  margin: 0;
+}
+
+.hero h2 {
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  color: #6b7c93;
+}
+.hero .intro {
+  color: #8a8480;
+  font-size: 24px;
+  line-height: 1.6;
+  margin: 16px 0 16px 0;
+}
+
+/* color: #050816; */
+.hero span {
+  color: #222;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.hero p {
+  color: #8a8480;
+  font-size: 19px;
+  line-height: 1.65;
+}
+.hero .btn {
+  font-size: larger;
+  margin: 30px 0 !important;
+}
+.btn:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 30px;
+  }
+  .hero h2 {
+    font-size: 21px;
+  }
+  .hero p {
+    font-size: 17px;
+  }
+}
